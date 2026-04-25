@@ -1,5 +1,5 @@
 body {
-    background-color: #ddd;
+    background-color: white;
     font-size: 20px;
 }
 
@@ -10,16 +10,43 @@ body {
     padding: 50px;
 }
 
+.over p {
+    margin-bottom: 0;
+    text-transform: uppercase; 
+    letter-spacing: 2px;    
+}
+
+#first {
+    color: black;
+    
+}
+
+#last {
+    font-style: italic;
+    text-align: left;
+    color: black;
+}
+
+.list {
+    margin-top: 20px;
+}
+
+.list ol li {
+    margin-top: 20px;
+}
+
+
 p {
-    color: #035f9c;
+    color: #3b8dc6;
     font-size: 1.3em;
 }
 
 
 hr {
-    height: 2px;
-    background-color: #035f9c;
+    height: 1px;
+    background-color: darkgrey;
     width: 80%;
+    margin-top: 0px;
 }
 
 h1, h2, p {
@@ -41,8 +68,8 @@ li {
 img {
     display: block;
     margin: 0 auto;
-    width: 50%;
-}
+    /* width: 50%; */
+} 
 
 .list {
     list-style: none;
