@@ -4,6 +4,10 @@ console.log(title);
 
 title.textContent = "Web Page Componests";
 
+title.addEventListener('click', function(){
+    title.classList.toggle('highlight')
+})
+
 //Same thing as above
 //document.querySelector('h1').title.textContent = "Web Page Componests";
 
