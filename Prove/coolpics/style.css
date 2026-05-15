@@ -31,8 +31,16 @@ section {
 nav a {
     padding: 20px;
     color: black;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    border-top: 1px solid gray;
+}
+
+.hide {
     display: none;
 }
+
 nav a:hover {
     text-decoration: none;
     color: #616061;
@@ -47,6 +55,8 @@ nav a:hover {
     height: 4px;
     background-color: black;
     margin: 5px 0;
+    transition: 1.5s;
+    transform-origin: center;
 }
 footer {
     text-align: center;
@@ -60,10 +70,51 @@ section img {
     margin: 0 auto;
 }
 
+.change .bar1 {
+    
+  transform: translate(0, 9.5px) rotate(-45deg);
+}
+.change .bar2 {opacity: 0;}
 
+.change .bar3 {
+  transform: translate(0, -9.5px) rotate(45deg);
+}
+
+dialog {
+    border: none;
+    border-radius: 8px;
+    padding: 0;
+    width: 90%;
+    max-width: 850;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+dialog img {
+    width: 100%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: cover;
+    display: block;
+}
+
+.close-viewer {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
 
 @media screen and (min-width: 700px) {
-    main {
+    .gallery {
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
@@ -72,20 +123,26 @@ section img {
     }
     nav a {
         display: inline;
+        border: none;
+        text-align: center;
         
     }
     nav {
         text-align: center;
     }
+    .hide {
+        display: inline;
+    }
 
 }
           
 @media screen and (min-width: 1000px) {
-    main {
+    .gallery {
         grid-template-columns: 1fr 1fr 1fr;
     }
 
 }
+
 
 
 
