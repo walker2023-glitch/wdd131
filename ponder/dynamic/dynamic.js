@@ -38,3 +38,20 @@ student.forEach(function(item)
     container.append(name);
 })
 
+
+//literal array
+const pets = ['cats', 'dog', 'bird'];
+
+//constructor array
+const animal = new Array('pig', 'goat,', 'sheep');
+
+pets.push('lizard');
+
+console.log(pets);
+
+console.log(pets[0]);
+
+//puts at begginning
+pets.unshift('Bob');
+//Gets rid of the last one
+pets.pop();
