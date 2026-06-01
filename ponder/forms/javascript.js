@@ -74,6 +74,11 @@ form.addEventListener("submit", function (event) {
     return;
   }
 
+  if(type == 'single' && selectedCampuses.length > 1){
+        output.textContent = "Please select at only 1 campuses";
+        return;
+    }
+
   output.innerHTML = `
   <h2>Preference Submitted</h2>
   <p>${firstName} ${lastName}</p>
