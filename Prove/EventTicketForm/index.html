@@ -1,0 +1,71 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FSY Counselor Preference Form</title>
+  <link type="image/png" sizes="16x16" rel="icon" href="icons8-ticket-color-16.png">
+  <link rel="stylesheet" href="style.css" />
+  <script src="javascript.js" defer></script>
+</head>
+<body>
+  <main class="wrapper">
+    <h1>Event Ticket Form</h1>
+
+    <form id="fsyForm">
+      <div class="field">
+        <label for="firstName">First Name</label>
+        <input id="firstName" name="firstName" type="text" required title="Enter your first name"/>
+      </div>
+
+      <div class="field">
+        <label for="lastName">Last Name</label>
+        <input id="lastName" name="lastName" type="text" required title="Enter your last name"/>
+      </div>
+
+      <div class="field full">
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required title="Enter your email address"/>
+      </div>
+
+      <div class="field">
+        <label for="type">Type</label>
+        <select
+          id="travelRange"
+          name="travelRange"
+          aria-controls="notesContainer"
+          required
+        >
+          <option value="">Choose one</option>
+          <option value="student">student</option>
+          <option value="guest">Guest</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="availableDate">Event Date</label>
+        <input id="availableDate" name="availableDate" type="date" required />
+      </div>
+
+      
+
+      <div id="notesContainer" class="field full" hidden>
+        <label for="notes">Student I-number:</label>
+        <input id="notes" name="notes" type="text" pattern="^\d{9}$" title="Enter a 9-digit student I number, such as 123456789"/>
+      </div>
+
+      <div id="notesContainer2" class="field full" hidden>
+        <label for="notes">Access Code:</label>
+        <input id="notes2" name="notes" type="text" title="Enter the code, no hints"/>
+      </div>
+
+      <button class="full" type="submit">Submit Ticket Info</button>
+    </form>
+
+    <section id="output" aria-live="polite"></section>
+    <a target="_blank" href="https://icons8.com/icon/13032/ticket">Ticket</a> icon by <a target="_blank" href="https://icons8.com">Icons8</a>
+  </main>
+</body>
+</html>
+          
