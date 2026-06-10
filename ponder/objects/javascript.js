@@ -30,6 +30,16 @@ const aCourse = {
           this.sections[sectionIndex].enrolled++;
           renderSections(this.sections);
         }
+      },
+      unenrollStudent: function (sectionNum) {
+        // find the right section...Array.findIndex will work here
+        const sectionIndex = this.sections.findIndex(
+          (section) => section.sectionNum == sectionNum
+        );
+        if (sectionIndex >= 0) {
+          this.sections[sectionIndex].enrolled++;
+          renderSections(this.sections);
+        }
       }
   };
 
