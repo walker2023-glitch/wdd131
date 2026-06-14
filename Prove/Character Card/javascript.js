@@ -2,7 +2,7 @@ const aCreature = {
     name: 'Snortleblat',
     health: 100,
     level: 5,
-    logo: '/images/swampMonster.png', // Update this path to match your image folder
+    logo: 'images/swampMonster.png', // Update this path to match your image folder
     
     levelUp: function () {
         this.level++;
