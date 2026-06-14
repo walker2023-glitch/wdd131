@@ -2,7 +2,7 @@ const aCreature = {
     name: 'Snortleblat',
     health: 100,
     level: 5,
-    logo: 'images/swampMonster.png', // Update this path to match your image folder
+    logo: '../../images/swampMonster.png',
     
     levelUp: function () {
         this.level++;
@@ -10,20 +10,18 @@ const aCreature = {
     },
     damage: function () {
         this.health -= 20;
-        // Prevent health from dropping below 0
         if (this.health < 0) {
             this.health = 0;
         }
     }
 };
 
-// 1. Initial Setup for Image and static attributes
+
 const imgElement = document.querySelector('#creature-img');
 imgElement.setAttribute('src', aCreature.logo);
 imgElement.setAttribute('alt', aCreature.name);
 imgElement.setAttribute('style', 'width: 250px; height: auto;');
 
-// 2. Function to update the DOM elements with current object stats
 function renderCreature() {
     document.querySelector('#creature-name').textContent = aCreature.name;
     document.querySelector('#creature-level').textContent = aCreature.level;
