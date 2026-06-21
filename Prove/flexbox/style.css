@@ -1,0 +1,193 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    max-width: 800px;
+    margin: auto;
+    padding: 1.5em;
+}
+
+/* Typography */
+h1, h2 {
+    font-family: 'Amatic SC', cursive;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: 3.5rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #1a73e8; /* Adjust color as needed */
+}
+
+/* Header Flexbox */
+.main-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.brand-icon {
+    width: 60px;
+    height: auto;
+}
+
+/* Search Bar Structure */
+.search-container {
+    margin-bottom: 2rem;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 2px solid #333;
+    border-radius: 4px;
+    padding: 5px 10px;
+}
+
+.search-box input {
+    flex: 1;
+    border: none;
+    font-size: 1.1rem;
+    outline: none;
+    padding: 5px;
+}
+
+.search-icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Mobile Media Card (Stacked Layout) */
+.media-card {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #333;
+    border-radius: 8px;
+    padding: 15px;
+    gap: 15px;
+    position: relative;
+}
+
+.media-card-image {
+    position: relative;
+    width: 100%;
+}
+
+.media-card-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 4px;
+}
+
+/* Dessert Tag Positioning */
+.tag {
+    display: inline-block;
+    border: 1px solid #777;
+    background-color: #878686;
+    padding: 0px 4.5rem 0px 0px;
+    font-size: 1.25rem;
+    margin-top: 8px;
+    width: 50px;
+}
+
+.media-card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Hide description text on mobile devices */
+.description {
+    display: none;
+}
+
+/* Rating Star styling */
+.rating {
+    font-size: 1.2rem;
+}
+
+/* Social Media Container Flexbox */
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 1.5rem;
+}
+
+/* Explicit width fix for the social icons */
+.social a {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+}
+
+.social-icon {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+/* -------------------------------------------
+   Larger Device Layout Changes (min-width: 550px)
+------------------------------------------- */
+@media screen and (min-width: 550px) {
+    
+    /* Flip card layout from column to row side-by-side */
+    .media-card {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .media-card-image {
+        flex: 1.2; /* Let the image take up slightly more space */
+    }
+
+    .media-card-content {
+        flex: 1;
+        /* Pull tag above title layout dynamically */
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Target dessert tag inside the card layout changes */
+    .media-card-image .tag {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        margin-top: 0;
+    }
+
+    /* Show description paragraph text on larger screens */
+    .description {
+        display: block;
+        font-size: 1rem;
+        line-height: 1.4;
+        color: #333;
+    }
+
+    /* Move social icons to the bottom right on desktop layout */
+    .social {
+        justify-content: flex-end;
+    }
+}
