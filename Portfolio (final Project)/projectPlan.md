@@ -61,3 +61,27 @@ Create a wireframe for your project. Add your wireframe as an image or link to t
 
 ![Screen 3 Screenshot](../images/screen3.png)
 
+### Font and Colors:
+
+Typography
+Primary Font: Inter
+Style: The system prioritizes a clean, sans-serif look with frequent use of uppercase and monospace labels to simulate a technical terminal or IDE environment.
+Color Palette
+The palette is centered around a "utility-first" dark mode:
+
+Backgrounds:
+Global Base: #0A0A0A (Deep matte black)
+Containers/Cards: #121212 (Surface layer)
+Modals/Overlays: #1A1A1A (Overlay layer)
+Primary Accent: Emerald Green (#10B981)
+Used for active status indicators, primary buttons, folder icons, and focus states.
+Borders & Dividers: #262626
+Sharp, 1px lines used to define the high-density grid.
+Text:
+Headings/Primary: High-visibility White/Off-white
+Secondary/Utility: Muted Greys and Emerald accents for key data points.
+
+
+### Logo:
+
+![Logo](../images/PortfolioLogo.png)
