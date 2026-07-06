@@ -76,7 +76,7 @@ const recipes = [
 		tags: ['Potatoes', 'side'],
 		description:
 			'Easy and delicious oven roasted potatoes that go great with almost anything.',
-		image: '../../images/roasted-potatoes.jpp',
+		image: '../../images/roasted-potatoes.jpg',
 		recipeIngredient: [
 			'3-4 Medium Potatoes',
 			'1 Tbsp Olive oil',
